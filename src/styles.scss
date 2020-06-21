@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import 'mixins';
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+  margin: 0;
+}
+
+header {
+  background-color: #adadad;
+  height: 2rem;
+
+  &:hover {
+    background-color: #e6e6e6;
+  }
+
+  span {
+    color: black;
+    margin: 0.5rem;
+
+    &:hover {
+      color: #3c87d5;
+    }
+  }
+}

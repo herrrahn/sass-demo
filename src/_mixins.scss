@@ -1,0 +1,16 @@
+
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transform($property, $withBorder: false) {
+  //@error "transform call with: #{$property}";
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+  @if ($withBorder) {
+    border: 1px dotted black;
+  }
+}

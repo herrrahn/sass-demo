@@ -1,0 +1,44 @@
+@import './src/styles';
+@import './src/mixins';
+
+span {
+  &:hover{
+    @include transform(rotate(10deg));
+  }
+}
+
+#pageTitle {
+  @include center();
+  background-color: lightgoldenrodyellow;
+  height: 50px;
+}
+
+.container {
+  @include center();
+  padding-top: 2rem;
+}
+
+img {
+
+  &:hover {
+    animation-duration: 1000ms;
+    animation-name: spin;
+    @keyframes spin {
+      0% {
+        @include transform(rotate(5deg), true);
+      }
+      25% {
+        @include transform(rotate(-10deg), true);
+      }
+      50% {
+        @include transform(rotate(15deg));
+      }
+      75% {
+        @include transform(rotate(-10deg));
+      }
+      100% {
+        @include transform(rotate(5deg));
+      }
+    }
+  }
+}
